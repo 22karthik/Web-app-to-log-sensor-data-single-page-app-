@@ -1,0 +1,23 @@
+<h1>{{message}}</h1>
+<div ng-controller="node2controller">
+<table border="1">
+	<thead>
+		<tr>
+		  <th>Time</th>
+		  <th>NTC</th>
+		  <th>LDR</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr ng-repeat="s in data">
+				
+				<td>{{s.time1}}</td>
+				<td>{{s.NTC1}}</td>
+		        <td>{{s.LDR1}}</td>
+
+		</tr>
+		
+		
+	</tbody>
+</table>
+

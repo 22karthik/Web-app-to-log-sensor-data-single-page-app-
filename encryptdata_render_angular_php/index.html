@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="demo">
+<head>
+    <title>LoRa Visualization</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+   
+    <script src="Script.js"></script>
+	<script src="Chart.min.js"></script>
+	<script src="angular-chart.min.js"></script>
+	
+    <link href='style.css' rel='stylesheet' />
+</head>
+<body>
+    <table style="font-family: Arial">
+        <tr>
+            <td colspan="2" class="header">
+                <h1>
+                    Log for LoRa Modules
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftMenu">
+                <a href="#!/home">Home</a>
+                <a href="#!/node2">Node2</a>
+				<a href="#!/node3">Node3</a>
+			    <a href="#!/ntc">NTC</a>
+				<a href="#!/ldr">LDR</a>
+            </td>
+            <td class="mainContent">
+                <ng-view></ng-view>
+            </td>
+        </tr>
+		
+		<tr>
+		
+		
+		 <tr>
+            <td colspan="2" class="footer">
+                <b>For Internship</b>
+            </td>
+        </tr>
+    </table>
+	
+	
+		 
+	
+
+	
+	
+	
+         
+</body>
+</html>

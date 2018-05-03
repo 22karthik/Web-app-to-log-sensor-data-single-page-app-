@@ -1,0 +1,47 @@
+<?php
+
+include "connect.php";
+
+$query="select encrypted_data from encrypted_data where src=1";
+
+$rs=$dbhandle->query($query);
+
+
+ 
+while ($row = $rs->fetch_assoc()) {
+  $data['encrypted_data'] = $row;
+  
+  
+  writeMsg($row );
+ 
+ }
+ 
+ function writeMsg($data)
+ {
+	 $key = hex2bin('2b7e151628aed2a6abf7158809cf4f3c');
+     $iv = hex2bin('f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff');
+	foreach($data as $str)
+{
+	
+	
+	$input=hex2bin($str);
+	
+
+	$newstr = filter_var($input, FILTER_SANITIZE_STRING);
+	
+	
+	$decrypt=explode(' ',$newstr);
+	
+	$end=$decrypt[0];
+	
+	$output = openssl_decrypt($end, 'AES-128-CTR', $key,OPENSSL_RAW_DATA, $iv);
+   
+     echo $output;
+	
+	
+} 
+	 
+ }
+ 
+
+ ?>
