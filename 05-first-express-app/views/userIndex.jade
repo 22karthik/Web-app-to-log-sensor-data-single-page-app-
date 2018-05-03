@@ -1,0 +1,47 @@
+extends layout
+block content
+
+
+  div(class="container" id="Cool" ng-app="mainApp")
+     div(ng-controller="myCtrl")
+      button(ng-click="myfuc()") Refresh Page
+     div
+
+     h3 Temperature and Light sensor Log
+     table.table(ng-controller="TodoController")
+      thead
+        tr
+
+              th time
+              th ldr
+              th ntc
+
+
+      tbody
+        tr(ng-repeat="todo in todos" id="{{todo.time}}")
+          th(scope='row') {{ todo.time }}
+            td {{ todo.ldr}}
+            td {{ todo.ntc }}
+
+
+
+  script(type="text/javascript").
+
+   var data=!{JSON.stringify(dataGet)};
+   var mainApp = angular.module("mainApp", []);
+
+   mainApp.controller("TodoController", function($scope,$interval) {
+     $scope.todos = !{JSON.stringify(dataGet)};
+
+   });
+
+   mainApp.controller("myCtrl", function ($scope,$window) {
+     $scope.myfuc=function(){
+        $window.location.reload();
+     }
+    });
+
+
+
+
+
