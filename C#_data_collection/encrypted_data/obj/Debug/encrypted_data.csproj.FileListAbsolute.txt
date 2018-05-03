@@ -1,0 +1,8 @@
+E:\encrypted_data\encrypted_data\bin\Debug\encrypted_data.exe.config
+E:\encrypted_data\encrypted_data\bin\Debug\encrypted_data.exe
+E:\encrypted_data\encrypted_data\bin\Debug\encrypted_data.pdb
+E:\encrypted_data\encrypted_data\bin\Debug\MySql.Data.dll
+E:\encrypted_data\encrypted_data\bin\Debug\MySql.Data.xml
+E:\encrypted_data\encrypted_data\obj\Debug\encrypted_data.csprojResolveAssemblyReference.cache
+E:\encrypted_data\encrypted_data\obj\Debug\encrypted_data.exe
+E:\encrypted_data\encrypted_data\obj\Debug\encrypted_data.pdb
